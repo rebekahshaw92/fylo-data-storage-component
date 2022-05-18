@@ -1,0 +1,14 @@
+.attribution { 
+    font-size: 11px; 
+    padding-top: 30%;
+    padding-bottom: 20px;
+    color: white;
+     a { 
+         color: hsl(228, 45%, 44%); 
+        }
+    @include media-breakpoint-up(lg){
+        padding-top: 20%;
+    }
+}
+
+ 

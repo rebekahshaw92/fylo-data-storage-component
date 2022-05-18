@@ -1,0 +1,122 @@
+$veryDarkBlue: hsl(229, 57%, 11%);
+$darkBlue: hsl(228, 56%, 26%);
+$gradient: hsl(6, 100%, 80%), hsl(335, 100%, 65%);
+
+body {
+    background-image: url("../images/bg-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    @include media-breakpoint-up(lg){
+        background-image: url("../images/bg-desktop.png");
+        background-size: 100% 50%;
+        background-attachment: fixed;
+        background-position: bottom center;
+        background-color: $veryDarkBlue;
+    }
+}
+
+.card {
+    background-color: $darkBlue;
+    margin: auto;
+    padding: auto;
+    padding: 2.5rem;
+    width: 85%;
+    @include media-breakpoint-up(lg){
+        width: 100%;
+    }
+}
+
+.cardHeader {
+    margin-top: 25%;
+    border-radius: 10px 100px 10px 10px;
+    @include media-breakpoint-up(lg){
+        margin-top: 80%;
+        margin-left: 10%;
+        height: 41%;
+    }
+}
+
+.card-img {
+    width: 50%;
+}
+
+.icon {
+    background-color: $veryDarkBlue;
+    padding: 0.938rem;
+    margin-top: 40%;
+}
+
+.cardMain {
+    margin-top: 5%;
+    @include media-breakpoint-up(lg){
+        margin-top: 50%;
+        margin-left: 8%;
+    }
+}
+
+.bar {
+    height: 1.563rem;
+    margin-top: 5%;
+    background-color: $veryDarkBlue;
+    border-radius: 2.4rem;
+}
+
+.progress {
+    width: 70%;
+    background: linear-gradient($gradient);
+    height: 60%;
+    border-radius: 2.4rem;
+    margin-left: 0.313rem;
+}
+
+.circle::before {
+    content: '';
+    display: inline-block;
+    width: 0.938rem;
+    height: 0.938rem;
+    border-radius: 0.469rem;
+    background-color: white;
+}
+
+.end {
+    margin-left: 24%;
+    @include media-breakpoint-up(lg){
+        margin-left: 68%;
+    }
+}
+
+.cardLeft {
+    background-color: white;
+    max-width: 12.375rem;
+    align-items: center;
+    position: absolute;
+    justify-content: space-between;
+    padding: auto;
+    margin: auto;
+    padding-top: 0.4rem;
+    padding-left: 1.5rem;
+    padding-right: 0.5rem;
+    border-radius: 15px;
+    margin-top: -10%;
+    left: 0;
+    right: 0;
+    @include media-breakpoint-up(lg){
+        margin-top: -16%;
+        left: 55rem;
+        max-width: 11.375rem;
+        border-radius: 10px 10px 0 10px;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 0; 
+        height: 0; 
+        border-left: 30px solid transparent;
+        border-right: 0px solid transparent;
+        border-top: 30px solid white;
+        transform: translateY(10px) translateX(111px);
+        margin-top: 32%;
+        margin-left: 9%;
+        }
+    }   
+}
+
